@@ -2,7 +2,7 @@
 
 <a href="https://github.com/stepien-lab/glioma-Tcell-MDSC/"><img src="https://img.shields.io/badge/GitHub-stepien--lab%2Fglioma--Tcell--MDSC-blue" /></a> <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" /></a>
 
-The code contained in the glioma-Tcell-MDSC was developed to numerically simulate the interactions of glioma cells, T cells, and myeloid-derived suppressor cells (MDSCs) in a model of brain cancer. It is described in:
+The code contained in the glioma-Tcell-MDSC project was developed to numerically simulate the interactions of glioma cells, T cells, and myeloid-derived suppressor cells (MDSCs) in a model of brain cancer. It is described in:
 >Hannah G. Anderson, Gregory P. Takacs, Duane C. Harris, Yang Kuang, Jeffrey K. Harrison, and [Tracy L. Stepien](https://github.com/tstepien/), Effect of myeloid-derived suppressor cells on glioblastoma–immune dynamics, In Preparation.
 
 ## Programs
