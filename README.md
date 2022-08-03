@@ -1,5 +1,4 @@
 # glioma-Tcell-MDSC
-Simulations of a mathematical model of interactions between glioma cells, T cells, and myeloid-derived suppressor cells (MDSCs)
 
 <a href="https://github.com/stepien-lab/glioma-Tcell-MDSC/"><img src="https://img.shields.io/badge/GitHub-stepien--lab%2Fglioma--Tcell--MDSC-blue" /></a> <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" /></a>
 
