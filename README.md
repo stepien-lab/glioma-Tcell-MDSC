@@ -6,7 +6,14 @@ The code contained in the glioma-Tcell-MDSC project was developed to numerically
 >[Hannah G. Anderson](https://github.com/HannahGrace314), [Gregory P. Takacs](https://pharmacology.med.ufl.edu/profile/takacs-gregory/), [Duane C. Harris](https://search.asu.edu/profile/2524814), [Yang Kuang](https://math.la.asu.edu/~kuang/), [Jeffrey K. Harrison](https://pharmacology.med.ufl.edu/profile/harrison-jeffrey/), and [Tracy L. Stepien](https://github.com/tstepien/), Global stability and parameter analysis reinforce therapeutic targets of PD-L1-PD-1 and MDSCs for glioblastoma, Submitted to _Journal of Mathematical Biology_.
 
 ## Programs
-+ [filename.m](filename.m): run this program to solve the model equations
++ [GBMFunc.m](GBMFunc.m): model equations
++ [ABCrejection.m](ABCrejection.m): run this program to obtain parameter samples and error values according to data (uses GBMFunc.m)
++ [ABCfigures.m](ABCfigures.m): accepts parameter values based on specified error threshold to finish ABC rejection and obtain scatter/contour plots (uses output of ABCrejection.m)
++ [GBMnumsim.m](GBMnumsim.m): plots numerical simulations of model (uses GBMFunc.m and output from ABCfigures.m)
++ [ABCdistributions.m](ABCdistributions.m): determines distributions of ABC histograms (uses output from ABCfigures.m)
+
+![image](https://user-images.githubusercontent.com/89090482/209006582-2d319573-2182-49ff-8209-cd57bd4128f0.png)
+
 
 ## Description of Folders
 + [foldername](foldername): Code to create Figures... in the paper
