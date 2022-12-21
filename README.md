@@ -12,6 +12,8 @@ The code contained in the glioma-Tcell-MDSC project was developed to numerically
 + [GBMnumsim.m](GBMnumsim.m): plots numerical simulations of model (uses GBMFunc.m and output from ABCfigures.m)
 + [ABCdistributions.m](ABCdistributions.m): determines distributions of ABC histograms (uses output from ABCfigures.m)
 
+![image](https://user-images.githubusercontent.com/89090482/209017684-ac768527-f079-4604-a4ca-e719dde711b5.png)
+
 
 ## Lead Developer
 The lead developer of this code is [Hannah G. Anderson](https://github.com/HannahGrace314).
