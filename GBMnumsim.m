@@ -2,15 +2,15 @@
 
 clear
 
-load('ABCmin.mat') %ABCfigures.m output (obtained after using minimum data for ABCrejection.m)
+load('ABCminfornumsim.mat') %ABCfigures.m output (obtained after using minimum data for ABCrejection.m)
 minminP = minP;
 errormin =  min(error(1:n));
 
-load('ABCmax.mat') %ABCfigures.m output (obtained after using maximum data for ABCrejection.m)
+load('ABCmaxfornumsim.mat') %ABCfigures.m output (obtained after using maximum data for ABCrejection.m)
 maxminP = minP;
 errormax = min(error(1:n));
 
-load('ABC.mat') %ABCfigures.m output (obtained after using average data for ABCrejection.m)
+load('ABCfornumsim.mat') %ABCfigures.m output (obtained after using average data for ABCrejection.m)
 F = min(error(1:n));
 
 
