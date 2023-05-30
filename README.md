@@ -1,6 +1,6 @@
 # glioma-Tcell-MDSC
 
-<a href="https://github.com/stepien-lab/glioma-Tcell-MDSC/"><img src="https://img.shields.io/badge/GitHub-stepien--lab%2Fglioma--Tcell--MDSC-blue" /></a> <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" /></a>
+<a href="https://github.com/stepien-lab/glioma-Tcell-MDSC/"><img src="https://img.shields.io/badge/GitHub-stepien--lab%2Fglioma--Tcell--MDSC-blue" /></a> <a href="https://doi.org/10.1101/2023.05.15.540846"><img src="https://img.shields.io/badge/bioRxiv-2023.05.15.540846-orange" /></a> <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" /></a>
 
 The code contained in the glioma-Tcell-MDSC project was developed to numerically simulate the interactions of glioma cells, T cells, and myeloid-derived suppressor cells (MDSCs) in a model of brain cancer. It is described in:
 >[Hannah G. Anderson](https://github.com/HannahGrace314), [Gregory P. Takacs](https://pharmacology.med.ufl.edu/profile/takacs-gregory/), [Duane C. Harris](https://search.asu.edu/profile/2524814), [Yang Kuang](https://math.la.asu.edu/~kuang/), [Jeffrey K. Harrison](https://pharmacology.med.ufl.edu/profile/harrison-jeffrey/), and [Tracy L. Stepien](https://github.com/tstepien/), Global stability and parameter analysis reinforce therapeutic targets of PD-L1-PD-1 and MDSCs for glioblastoma, Submitted to _Journal of Mathematical Biology_.
