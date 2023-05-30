@@ -25,4 +25,4 @@ http://malthus.micro.med.umich.edu/lab/usadata/
 The lead developer of this code is [Hannah G. Anderson](https://github.com/HannahGrace314).
 
 ## Licensing
-Copyright 2022 [Tracy Stepien's Research Lab Group](https://github.com/stepien-lab/). This is free software made available under the MIT License. For details see the [LICENSE](LICENSE) file.
+Copyright 2022-2023 [Tracy Stepien's Research Lab Group](https://github.com/stepien-lab/). This is free software made available under the MIT License. For details see the [LICENSE](LICENSE) file.
