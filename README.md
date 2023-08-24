@@ -11,6 +11,7 @@ The code contained in the glioma-Tcell-MDSC project was developed to numerically
 + [ABCfigures.m](ABCfigures.m): accepts parameter values based on specified error threshold to finish ABC rejection and obtain scatter/contour plots
 + [GBMnumsim.m](GBMnumsim.m): plots numerical simulations of model
 + [ABCdistributions.m](ABCdistributions.m): determines distributions of ABC histograms
++ [GBMbifurcationanalysis.m](GBMbifurcationanalysis.m): produces bifurcation analysis on parameters
 
 ![image](https://user-images.githubusercontent.com/89090482/209017684-ac768527-f079-4604-a4ca-e719dde711b5.png)
 
