@@ -40,7 +40,7 @@ pn = ["\lambda_C";
 % MODEL PARAMETERS:
 mp = [0.431;         %  1 - λ_C   - Maximum Growth Rate of Tumor 
       3.04e6;        %  2 - C_max - Carrying Capacity of Tumor Cells 
-      2.57e-8;       %  3 - η     - kill rate of tumor cells by T cells   %%%%                       
+      2.57e-8;       %  3 - η     - kill rate of tumor cells by T cells                         
       3.26e6;        %  4 - a_T   - activation rate by IL-12
       8.56e6;        %  5 - s_T   - stimulation rate by IL-2
       0.107;         %  6 - ρ     - inhibition of T cells by PD-1-PD-L1 complex
