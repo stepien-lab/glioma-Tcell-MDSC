@@ -13,7 +13,9 @@ The code contained in the glioma-Tcell-MDSC project was developed to numerically
 + [sample_distmatch.m](sample_distmatch.m): determines distributions of ABC histograms using the Weisserstein metric / Earth mover's distance
 + [GBMbifurcationanalysis.m](GBMbifurcationanalysis.m): produces bifurcation analysis on parameters
 
-![image](https://user-images.githubusercontent.com/89090482/209017684-ac768527-f079-4604-a4ca-e719dde711b5.png)
+
+<img width="937" alt="programstructureforABC" src="https://github.com/stepien-lab/glioma-Tcell-MDSC/assets/89090482/60542b95-f2bb-45ff-8808-405d75f40825">
+
 
 Code for the Wasserstein metric / Earth mover's distance (ws_distance.m) was developed by Niklas Kolbe (2023) and can be found at: 
 https://github.com/nklb/wasserstein-distance
