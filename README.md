@@ -10,14 +10,15 @@ The code contained in the glioma-Tcell-MDSC project was developed to numerically
 + [ABCrejection.m](ABCrejection.m): run this program to obtain parameter samples and error values according to data
 + [ABCfigures.m](ABCfigures.m): accepts parameter values based on specified error threshold to finish ABC rejection and obtain scatter/contour plots
 + [GBMnumsim.m](GBMnumsim.m): plots numerical simulations of model
-+ [ABCdistributions.m](ABCdistributions.m): determines distributions of ABC histograms
++ [sample_distmatch.m](sample_distmatch.m): determines distributions of ABC histograms using the Weisserstein metric / Earth mover's distance
 + [GBMbifurcationanalysis.m](GBMbifurcationanalysis.m): produces bifurcation analysis on parameters
 
 ![image](https://user-images.githubusercontent.com/89090482/209017684-ac768527-f079-4604-a4ca-e719dde711b5.png)
 
+Code for the Wasserstein metric / Earth mover's distance (ws_distance.m) was developed by Niklas Kolbe (2023) and can be found at: 
+https://github.com/nklb/wasserstein-distance
 
 Code for the extended Fourier Analysis Sensitivity Test (eFAST) method was developed by the Krishner lab at Univeristy of Michigan and can be obtained at:
-
 Kirschner D (2008) Uncertainty and sensitivity functions and implementation.
 http://malthus.micro.med.umich.edu/lab/usadata/
 
