@@ -24,6 +24,8 @@ fs = 17;
     plotmode = 0;   % 0 - average of data points at a certain day
                     % 1 - all data points
                     % 2 - uses both 0 and 1
+                    % 3 - errorbar where center is mean and outer bounds
+                    % are min and max data points
                     
     datamode = 1;   % 0 - use accepted values for std and mean
                     % 1 - use analysis values for std and mean
@@ -57,6 +59,52 @@ Legendlabel = ["\lambda_C";
       "";
       "";
       "Mean"];
+
+%% RESTRUCTURE DATA FOR PLOT MODE 3
+
+numoftimedata = length(Averagetumordata(:,1));
+ 
+maxtumordata = zeros(numoftimedata,1);
+mintumordata = zeros(numoftimedata,1);
+    
+maxTcelldata = zeros(numoftimedata,1);
+minTcelldata = zeros(numoftimedata,1);
+    
+maxMDSCdata = zeros(numoftimedata,1);
+minMDSCdata = zeros(numoftimedata,1);
+  
+  
+if plotmode == 3
+    for i = 1:numoftimedata
+        elm = Averagetumordata(i,1);
+        
+        
+        maxtumordata(i) = max(tumordata(:,2).*(tumordata(:,1) == elm));
+        mintumordata(i) = min(nonzeros(tumordata(:,2).*(tumordata(:,1) == elm)));
+    
+        maxTcelldata(i) = max(Tcelldata(:,2).*(Tcelldata(:,1) == elm));
+        minTcelldata(i) = maxTcelldata(i);
+        
+        if elm == 24
+            minTcelldata(i) = min(Tcelldata(2:4,2)); 
+        end
+        
+    
+        maxMDSCdata(i) = max(MDSCdata(:,2).*(MDSCdata(:,1) == elm));
+        minMDSCdata(i) = min(nonzeros(MDSCdata(:,2).*(MDSCdata(:,1) == elm)));
+        
+    end
+    
+    
+    postumor = maxtumordata - Averagetumordata(:,2);
+    negtumor = Averagetumordata(:,2) - mintumordata;
+    
+    posTcell = nonzeros(maxTcelldata) - AverageTcelldata(:,2);
+    negTcell = AverageTcelldata(:,2) - nonzeros(minTcelldata);
+    
+    posMDSC = maxMDSCdata - AverageMDSCdata(:,2);
+    negMDSC = AverageMDSCdata(:,2) - minMDSCdata;
+end
                     
 %% DETERMINE STANDARD DEVIATIONS AND MEAN 
 
@@ -179,7 +227,10 @@ if plotmode == 2
     scatter(tumordata(:,1), tumordata(:,2),scattersize,'d','filled',"MarkerFaceColor","#77AC30")
     scatter(Averagetumordata(:,1), Averagetumordata(:,2),scattersize,'k','filled')
 end
-
+if plotmode == 3
+    scatter(tumordata(:,1), tumordata(:,2),scattersize,'d','filled',"MarkerFaceColor",'b')
+    errorbar(Averagetumordata(:,1), Averagetumordata(:,2), negtumor, postumor,'.','color','b')
+end
 hold off 
 xlabel('t (days)')
 ylabel('C (cells)')
@@ -230,7 +281,10 @@ if plotmode == 2
    scatter(Tcelldata(:,1), Tcelldata(:,2),scattersize,'d','filled',"MarkerFaceColor","#77AC30")
    scatter(AverageTcelldata(:,1), AverageTcelldata(:,2),scattersize,'k','filled')
 end
-
+if plotmode == 3
+    scatter(Tcelldata(:,1), Tcelldata(:,2),scattersize,'d','filled',"MarkerFaceColor",'b')
+    errorbar(AverageTcelldata(:,1), AverageTcelldata(:,2), negTcell, posTcell,'.','color','b')
+end
 hold off
 xlabel('t (days)')
 ylabel('T (cells)')
@@ -281,7 +335,12 @@ if plotmode == 2
     scatter(MDSCdata(:,1), MDSCdata(:,2),scattersize,'d','filled',"MarkerFaceColor","#77AC30")
     scatter(AverageMDSCdata(:,1), AverageMDSCdata(:,2),scattersize,'k','filled')
 end
-
+if plotmode == 3
+    databar = scatter(MDSCdata(:,1), MDSCdata(:,2),scattersize,'d','filled',"MarkerFaceColor",'b');
+    errorbar(AverageMDSCdata(:,1), AverageMDSCdata(:,2), negMDSC, posMDSC,'.','Color','b');
+    leg = legend(ax1,[databar, meanplot, s25,s50,s75,s100],["data", "mean", "\sigma/4","\sigma/2","3\sigma/4", "\sigma"],'FontSize',fs);
+    leg.Layout.Tile = 'east';
+end
 hold off
 xlabel('t (days)')
 ylabel('M (cells)')
@@ -349,6 +408,10 @@ if plotmode == 2
     scatter(tumordata(:,1), tumordata(:,2),scattersize,'d','filled',"MarkerFaceColor","#77AC30")
     scatter(Averagetumordata(:,1), Averagetumordata(:,2),scattersize,'k','filled')
 end
+if plotmode == 3
+    scatter(tumordata(:,1), tumordata(:,2),scattersize,'d','filled',"MarkerFaceColor",'b')
+    errorbar(Averagetumordata(:,1), Averagetumordata(:,2), negtumor, postumor,'.','color','b')
+end
 hold off 
 xlabel('t (days)')
 ylabel('C (cells)')
@@ -371,6 +434,10 @@ end
 if plotmode == 2
    scatter(Tcelldata(:,1), Tcelldata(:,2),scattersize,'d','filled',"MarkerFaceColor","#77AC30")
    scatter(AverageTcelldata(:,1), AverageTcelldata(:,2),scattersize,'k','filled')
+end
+if plotmode == 3
+    scatter(Tcelldata(:,1), Tcelldata(:,2),scattersize,'d','filled',"MarkerFaceColor",'b')
+    errorbar(AverageTcelldata(:,1), AverageTcelldata(:,2), negTcell, posTcell,'.','color','b')
 end
 hold off
 xlabel('t (days)')
@@ -399,6 +466,12 @@ if plotmode == 2
     p2 = scatter(MDSCdata(:,1), MDSCdata(:,2),scattersize,'d','filled',"MarkerFaceColor","#77AC30");
     p1 = scatter(AverageMDSCdata(:,1), AverageMDSCdata(:,2),scattersize,'k','filled');
     leg = legend(ax1,[m3,m2,m1,p1,p2],["Maximum","Average","Minimum", "Average Data","All Data"],'FontSize',fs);
+    leg.Layout.Tile = 'east';
+end
+if plotmode == 3
+    databar = scatter(MDSCdata(:,1), MDSCdata(:,2),scattersize,'d','filled',"MarkerFaceColor",'b');
+    errorbar(AverageMDSCdata(:,1), AverageMDSCdata(:,2), negMDSC, posMDSC,'.','Color','b');
+    leg = legend(ax1,[databar, meanplot, s25,s50,s75,s100],["data", "mean", "\sigma/4","\sigma/2","3\sigma/4", "\sigma"],'FontSize',fs);
     leg.Layout.Tile = 'east';
 end
 hold off
